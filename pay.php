@@ -1,4 +1,4 @@
-<script src="https://sdk.cashfree.com/js/ui/2.0.0/cashfree.sandbox.js"></script>
+<script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
 <body onload="payment()">
 <?php
 
@@ -17,7 +17,7 @@ $frmData = array(
     
 ),
 'order_meta'=> array(
-        'return_url' => 'http://localhost:8888/V3Api/success.php?order_id={order_id}',
+        'return_url' => 'http://localhost:8888/localhost/V3Api/success.php?order_id={order_id}',
         'notify_url' => '',
         'payment_methods' =>'' 
 )
@@ -67,13 +67,17 @@ $frmData = array(
 
 <script>
 function payment() {
-    let paymentSessionId = document.getElementById("paymentSessionId").value;
-    if (paymentSessionId == "") {
-        alert("No session_id specified");
-        return
-    };
-    const cf = new Cashfree(paymentSessionId);
-    cf.redirect();
+
+    const cashfree = Cashfree({
+    mode:"sandbox" //or production
+});
+let checkoutOptions = {
+    paymentSessionId: document.getElementById("paymentSessionId").value,
+    redirectTarget: "_self" //optional ( _self, _blank, or _top)
+}
+
+cashfree.checkout(checkoutOptions)
+   
 };
 </script>
 </body>

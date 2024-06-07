@@ -17,7 +17,8 @@
     <?php 
 
    $orderid = $_REQUEST['order_id'];
-   $url = "https://sandbox.cashfree.com/pg/orders/$orderid/payments";
+ //  $url = "https://sandbox.cashfree.com/pg/orders/$orderid/payments";
+   $url = "https://sandbox.cashfree.com/pg/orders/$orderid";
 
    $ch = curl_init();
 
@@ -44,6 +45,7 @@
    $returnCode = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
    curl_close($ch);
    $resps= json_decode($results, true);
+   print_r($resps);
 ?>
 
 
