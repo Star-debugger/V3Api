@@ -41,7 +41,7 @@ $frmData = array(
             CURLOPT_HTTPHEADER,
             array(
                 'Accept: application/json',
-                'x-api-version: 2022-09-01',
+                'x-api-version: 2025-01-01',
                 'Content-Type: application/json',
                 'x-client-id: 13764729ed596674a0f96e06f3746731',
                 'x-client-secret:1f4ee1fd095fcd3cfa702f0c91389c8adca03b5a'
