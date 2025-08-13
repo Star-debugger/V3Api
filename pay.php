@@ -17,9 +17,9 @@ $frmData = array(
     
 ),
 'order_meta'=> array(
-        'return_url' => 'http://localhost:8888/localhost/V3Api/success.php?order_id={order_id}',
+        'return_url' => 'http://localhost:8000/php_workspace/PHPV3API/v3api/success.php?order_id={order_id}',
         'notify_url' => '',
-        'payment_methods' =>'' 
+        'payment_methods' =>'upi,cc,nb' 
 )
 );
 
@@ -52,7 +52,7 @@ $frmData = array(
         $returnCode = (int)curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
         $resp = json_decode($result, true);
-     
+     print_R( $resp);
         $session =  $resp['payment_session_id'];
        
 

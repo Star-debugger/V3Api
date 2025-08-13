@@ -1,104 +1,63 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <title>V3 API</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cashfree V4 API Tailwind</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Cashfree SDK -->
+  <script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
 </head>
 
-<body style="background-color: #6933d3; color:white !important;">
-    <div class="row">
-        <div class="col-md-4">
-            <h3 style="margin-top: 50% !important; text-align: center;">Cashfree V4 Api Demo</h3>
-
-        </div>
-        <div class="col-md-4" style="float: right !important;">
-
-            <div class="container" style="margin-top: 19% !important;margin-left: 25% !important;  padding: 7%; border-style: dotted; border-color: white !important; box-shadow: 1px 2px 11px 5px white !important;">
-
-                <form method="post" action="pay.php">
-
-
-                    <div class="md-4">
-
-                        <div class="col">
-
-                            <div class="form-outline">
-                                <label class="form-label" for="form6Example2">Amount</label>
-                                <input type="number" id="form6Example2" name="orderamount" class="form-control"
-                                    placeholder="Please enter Amount" required />
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <div class="col">
-                            <div class="form-outline">
-                                <label class="form-label" for="form6Example1">Order Note</label>
-                                <input type="text" id="form6Example1" name="ordernote" class="form-control"
-                                    placeholder="Please enter Order Note" required />
-
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
-                            <div class="col">
-                                <div class="form-outline">
-                                    <label class="form-label" for="form6Example2">Customer name</label>
-
-                                    <input type="text" id="form6Example2" name="customername" class="form-control"
-                                        placeholder="Please enter Customer Name" required />
-                                </div>
-                            </div>
-
-
-                            <div class="col">
-                                <div class="form-outline">
-                                    <label class="form-label" for="form6Example1">Customer Email</label>
-
-                                    <input type="email" id="form6Example1" name="customeremail" class="form-control"
-                                        placeholder="Please enter Customer Email" required />
-                                </div>
-                            </div>
-                            <div class="col">
-                                <div class="form-outline">
-                                    <label class="form-label" for="form6Example2">Customer Phone</label>
-
-                                    <input type="text" pattern="[789][0-9]{9}" name="cuatomerphone" id="form6Example2"
-                                        placeholder="Please enter Customer Phone" class="form-control" required />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Submit button -->
-                    <button type="submit" class="btn btn-primary btn-block mb-4">Place order</button>
-                </form>
-            </div>
-
-        </div>
+<body class="bg-indigo-700 min-h-screen text-white">
+  <!-- Header -->
+  <header class="sticky top-0 z-50 w-full bg-indigo-800 shadow-md">
+    <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+      <a href="#" class="flex items-center space-x-2">
+        <img src="https://cashfreelogo.cashfree.com/cashfreepayments/logopng4x/Cashfree_Payments_Logo-3.png" class="h-6" alt="Cashfree Logo">
+        <span class="font-semibold text-lg">Cashfree V4 API Demo</span>
+      </a>
+      <a href="https://cashfree.com/devstudio" target="_blank" class="bg-yellow-300 text-black font-medium px-4 py-2 rounded-full hover:bg-yellow-400">Contact Us</a>
     </div>
-    <!-- 2 column grid layout with text inputs for the first and last names -->
+  </header>
 
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-4 py-12 grid md:grid-cols-2 gap-10 items-center">
+    <!-- Image -->
+    <div class="">
+      <img src="https://pagedone.io/asset/uploads/1700471600.png" alt="API Illustration" class="w-full h-auto rounded-lg shadow-lg" />
+    </div>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
-    </script>
+    <!-- Form -->
+    <div class="bg-white text-gray-800 p-8 rounded-lg shadow-xl">
+      <h2 class="text-2xl font-bold mb-6 text-center">Place Your Order</h2>
+      <form method="post" action="http://localhost:8000/php_workspace/PHPV3API/v3api/pay.php" class="space-y-5">
+        <div>
+          <label for="amount" class="block mb-1 font-medium">Amount</label>
+          <input type="number" name="orderamount" id="amount" required class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div>
+          <label for="ordernote" class="block mb-1 font-medium">Order Note</label>
+          <input type="text" name="ordernote" id="ordernote" required class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div>
+          <label for="customername" class="block mb-1 font-medium">Customer Name</label>
+          <input type="text" name="customername" id="customername" required class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div>
+          <label for="customeremail" class="block mb-1 font-medium">Customer Email</label>
+          <input type="email" name="customeremail" id="customeremail" required class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <div>
+          <label for="customerphone" class="block mb-1 font-medium">Customer Phone</label>
+          <input type="text" pattern="[789][0-9]{9}" name="cuatomerphone" id="customerphone" required class="w-full px-4 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500">
+        </div>
+        <button type="submit" class="w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition">Place Order</button>
+      </form>
+    </div>
+  </main>
 </body>
 
 </html>

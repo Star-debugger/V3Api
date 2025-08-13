@@ -17,8 +17,8 @@
     <?php 
 
    $orderid = $_REQUEST['order_id'];
- //  $url = "https://sandbox.cashfree.com/pg/orders/$orderid/payments";
-   $url = "https://sandbox.cashfree.com/pg/orders/$orderid";
+   $url = "https://sandbox.cashfree.com/pg/orders/$orderid/payments";
+   //$url = "https://sandbox.cashfree.com/pg/orders/$orderid";
 
    $ch = curl_init();
 
@@ -38,6 +38,7 @@
         'Content-Type: application/json',
         'x-client-id: 13764729ed596674a0f96e06f3746731',
         'x-client-secret:1f4ee1fd095fcd3cfa702f0c91389c8adca03b5a'
+        
     )
    );
 
